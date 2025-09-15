@@ -1,6 +1,7 @@
 /* --------------------------
    RESET E BASE
 --------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +15,11 @@ body {
     line-height: 1.6;
 }
 
+
 /* --------------------------
    HEADER / NAVBAR
 --------------------------- */
+
 header {
     background-color: #111111;
     padding: 1rem 2rem;
@@ -39,9 +42,11 @@ header nav a:hover {
     color: #e30613;
 }
 
+
 /* --------------------------
    MAIN PRINCIPAL
 --------------------------- */
+
 main h1 {
     text-align: center;
     margin: 2rem 0;
@@ -64,12 +69,13 @@ hr {
     margin: 1rem auto 2rem auto;
 }
 
+
 /* --------------------------
    HERO SECTION
 --------------------------- */
+
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://picsum.photos/1600/500?tech') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/1600/500?tech') center/cover no-repeat;
     padding: 5rem 1rem;
     color: #fff;
     text-align: center;
@@ -104,9 +110,11 @@ hr {
     background-color: #b1040f;
 }
 
+
 /* --------------------------
    SERVIÇOS
 --------------------------- */
+
 #servicos {
     background-color: #fff;
     padding: 3rem 1rem;
@@ -123,9 +131,11 @@ hr {
     line-height: 1.8;
 }
 
+
 /* --------------------------
    CONTATO
 --------------------------- */
+
 #contato {
     background-color: #f5f5f5;
     padding: 3rem 1rem;
@@ -137,13 +147,16 @@ hr {
     margin-bottom: 1rem;
 }
 
-#contato p, #contato strong {
+#contato p,
+#contato strong {
     color: #666666;
 }
+
 
 /* --------------------------
    RODAPÉ
 --------------------------- */
+
 footer {
     background-color: #111111;
     color: #cccccc;

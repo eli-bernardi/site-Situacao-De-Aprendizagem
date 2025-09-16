@@ -1,9 +1,5 @@
-/* --------------------------
-   RESET E BASE
---------------------------- */
-
+/* Reset e configurações básicas */
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -11,73 +7,91 @@
 body {
     font-family: "Inter", sans-serif;
     background-color: #f5f5f5;
-    color: #111111;
+    color: #111;
     line-height: 1.6;
 }
 
-
-/* --------------------------
-   HEADER / NAVBAR
---------------------------- */
-
+/* Cabeçalho e navegação */
 header {
-    background-color: #111111;
+    background-color: #111;
     padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header nav {
+nav {
     display: flex;
-    justify-content: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
     gap: 2rem;
 }
 
-header nav a {
-    color: #ffffff;
+.nav-list a {
+    color: white;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
-header nav a:hover {
+.nav-list a:hover {
     color: #e30613;
 }
 
+/* Menu mobile (simplificado) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
 
-/* --------------------------
-   MAIN PRINCIPAL
---------------------------- */
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    border-radius: 5px;
+}
 
+/* Conteúdo principal */
 main h1 {
     text-align: center;
     margin: 2rem 0;
-    color: #111111;
+    color: #111;
 }
 
 main p {
     max-width: 800px;
     margin: 1rem auto;
-    color: #666666;
+    color: #666;
     text-align: center;
     line-height: 1.8;
 }
 
-hr {
+.divider {
     border: none;
     height: 2px;
-    background-color: #e30613;
+    background: #e30613;
     width: 80px;
-    margin: 1rem auto 2rem auto;
+    margin: 1rem auto 2rem;
 }
 
-
-/* --------------------------
-   HERO SECTION
---------------------------- */
-
+/* Seção hero */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/1600/500?tech') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://picsum.photos/1600/500?tech') center/cover;
     padding: 5rem 1rem;
-    color: #fff;
+    color: white;
     text-align: center;
 }
 
@@ -89,77 +103,68 @@ hr {
 .hero p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    color: white;
 }
 
-.hero button {
-    background-color: #e30613;
+.btn {
+    background: #e30613;
     border: none;
     padding: 0.8rem 2rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s;
 }
 
-.hero button a {
-    color: #fff;
+.btn a {
+    color: white;
     text-decoration: none;
     font-weight: 600;
 }
 
-.hero button:hover {
-    background-color: #b1040f;
+.btn:hover {
+    background: #b1040f;
+    text-decoration: none;
 }
-
-
-/* --------------------------
-   SERVIÇOS
---------------------------- */
-
-#servicos {
-    background-color: #fff;
+.section {
     padding: 3rem 1rem;
     text-align: center;
 }
 
-#servicos h3 {
-    color: #111111;
+.section h3 {
+    color: #111;
     margin-bottom: 1rem;
+    text-decoration: none;
 }
 
-#servicos p {
-    color: #666666;
-    line-height: 1.8;
+.section p {
+    color: #666;
+    text-decoration: none;
+    color: #000;
 }
 
+.section a {
+    color: #0066cc;
+    text-decoration: none;
+}
 
-/* --------------------------
-   CONTATO
---------------------------- */
+.section a:hover {
+    text-decoration: underline;
+}
 
-#contato {
-    background-color: #f5f5f5;
-    padding: 3rem 1rem;
+.bg-white {
+    background: white;
+}
+h3{
     text-align: center;
 }
-
-#contato h3 {
-    color: #111111;
-    margin-bottom: 1rem;
+.bg-light {
+    background: #f5f5f5;
 }
 
-#contato p,
-#contato strong {
-    color: #666666;
-}
-
-
-/* --------------------------
-   RODAPÉ
---------------------------- */
-
+/* Rodapé */
 footer {
-    background-color: #111111;
-    color: #cccccc;
+    background: #111;
+    color: #ccc;
     padding: 2rem 1rem;
     text-align: center;
 }
@@ -169,9 +174,9 @@ footer a {
     margin: 0 0.5rem;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #ffffff;
+    color: white;
 }

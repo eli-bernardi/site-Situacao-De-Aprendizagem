@@ -1,9 +1,5 @@
-/* --------------------------
-   RESET E BASE
---------------------------- */
-
+/* Reset e configurações básicas */
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -11,37 +7,30 @@
 body {
     font-family: "Inter", sans-serif;
     background-color: #f5f5f5;
-    color: #111111;
+    color: #111;
     line-height: 1.6;
 }
 
-
-/* --------------------------
-   HEADER / NAVBAR
---------------------------- */
-
+/* Cabeçalho e navegação */
 header {
-    background-color: #111111;
+    background-color: #111;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-header nav {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo {
-    color: #ffffff;
+.logo {
+    color: white;
     font-size: 1.5rem;
     font-weight: 700;
 }
-
-
-/* lista do menu */
 
 .nav-list {
     display: flex;
@@ -49,185 +38,119 @@ header .logo {
     gap: 2rem;
 }
 
-.nav-list li a {
-    color: #ffffff;
+.nav-list a {
+    color: white;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
-.nav-list li a:hover {
+.nav-list a:hover {
     color: #e30613;
 }
 
-
-/* Ícone menu mobile */
-
+/* Menu mobile (simplificado) */
 .menu-toggle {
     display: none;
-    flex-direction: column;
     cursor: pointer;
-    gap: 5px;
 }
 
 .menu-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background: white;
+    margin: 3px 0;
     border-radius: 5px;
 }
 
-
-/* Responsividade do nav */
-
-@media (max-width: 768px) {
-    .nav-list {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 220px;
-        flex-direction: column;
-        background-color: #111111;
-        text-align: center;
-        padding: 1rem;
-        display: none;
-    }
-    .nav-list.active {
-        display: flex;
-    }
-    .menu-toggle {
-        display: flex;
-    }
-}
-
-
-/* --------------------------
-   MAIN PRINCIPAL
---------------------------- */
-
+/* Conteúdo principal */
 main h1 {
     text-align: center;
     margin: 2rem 0;
-    color: #111111;
+    color: #111;
 }
 
 main p {
     max-width: 800px;
     margin: 1rem auto;
-    color: #666666;
+    color: #666;
     text-align: center;
     line-height: 1.8;
 }
 
-hr {
+.divider {
     border: none;
     height: 2px;
-    background-color: #e30613;
+    background: #e30613;
     width: 80px;
-    margin: 1rem auto 2rem auto;
+    margin: 1rem auto 2rem;
 }
 
-
-/* --------------------------
-   HERO SECTION
---------------------------- */
-
+/* Seção hero */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/1600/500?tech') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://picsum.photos/1600/500?tech') center/cover;
     padding: 5rem 1rem;
-    color: #fff;
+    color: white;
     text-align: center;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
 }
 
 .hero h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
 
-/* --------------------------
-   O QUE É
---------------------------- */
+.btn {
+    background: #e30613;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
-#o-que-e {
-    background-color: #fff;
+.btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #b1040f;
+}
+
+/* Seções comuns */
+.section {
     padding: 3rem 1rem;
     text-align: center;
 }
 
-#o-que-e h3 {
-    margin-bottom: 1rem;
+.section h3 {
     color: #111;
+    margin-bottom: 1rem;
 }
 
-
-/* --------------------------
-   CONCEITOS PROFESSORES
---------------------------- */
-
-#conceitos-professores {
-    background-color: #f5f5f5;
-    padding: 3rem 1rem;
+.section p {
+    color: #666;
 }
 
-#conceitos-professores h3 {
-    text-align: center;
-    margin-bottom: 2rem;
+.bg-white {
+    background: white;
 }
 
-#conceitos-professores article {
-    background: #fff;
-    margin: 1rem auto;
-    padding: 1.5rem;
-    max-width: 700px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.bg-light {
+    background: #f5f5f5;
 }
 
-#conceitos-professores h4 {
-    margin-bottom: 0.5rem;
-    color: #e30613;
-}
-
-
-/* --------------------------
-   CONTEÚDOS
---------------------------- */
-
-#conteudos {
-    background-color: #fff;
-    padding: 3rem 1rem;
-}
-
-#conteudos h3 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-#conteudos article {
-    max-width: 800px;
-    margin: 2rem auto;
-    text-align: center;
-}
-
-#conteudos article img {
-    max-width: 200px;
-    margin: 1rem 0;
-}
-
-
-/* --------------------------
-   RODAPÉ
---------------------------- */
-
+/* Rodapé */
 footer {
-    background-color: #111111;
-    color: #cccccc;
+    background: #111;
+    color: #ccc;
     padding: 2rem 1rem;
     text-align: center;
 }
@@ -237,9 +160,9 @@ footer a {
     margin: 0 0.5rem;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #ffffff;
+    color: white;
 }

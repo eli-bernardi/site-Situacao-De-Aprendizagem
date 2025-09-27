@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    background-color: #121212;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+header {
+    background-color: #2c2c2c;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d62828;
+    margin: 0 24px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: 500;
+    transition: color 0.3s;
+
+}
+
+.nav-list a:hover {
+    text-decoration: none;
+    color: #d62828;
+}
+
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main section {
+    background-color: #1d1b1b;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main section h1,
+main section h2,
+main section h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main section h1 {
+    font-size: 2rem;
+    color: #111111;
+}
+
+main section h2 {
+    font-size: 1.6rem;
+    color: #d62828;
+}
+
+main section h3 {
+    font-size: 1.1rem;
+    color: #555555;
+    font-weight: 400;
+}
+
+main section p {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin: 1.5rem 0;
+}
+
+#fluxograma table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#fluxograma thead {
+    background-color: #d62828;
+    color: #ffffff;
+}
+
+#fluxograma th,
+#fluxograma td {
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: #cccccc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #d62828;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* ------------------------------
+   Símbolos do Fluxograma
+------------------------------ */
+
+/* Container dos símbolos para centralizar */
+.symbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* Terminador (Oval) */
+.terminador {
+    width: 80px;
+    height: 40px;
+    background-color: #1d1b1b;
+    border: 2px solid #d62828;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d62828;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.processo {
+    width: 80px;
+    height: 40px;
+    background-color: #1d1b1b;
+    border: 2px solid #d62828;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d62828;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.decisao {
+    width: 45px;
+    height: 45px;
+    background-color: #1d1b1b;
+    border: 2px solid #d62828;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d62828;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+}
+
+.decisao span {
+    transform: rotate(-45deg);
+    display: block;
+}
+
+.entrada-saida {
+    width: 80px;
+    height: 40px;
+    background-color: #1d1b1b;
+    border: 2px solid #d62828;
+    transform: skewX(-20deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d62828;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.entrada-saida span {
+    transform: skewX(20deg);
+}
+
+.fluxo {
+    width: 80px;
+    height: 10px;
+    background-color: #d62828;
+    position: relative;
+    margin: auto;
+}
+
+.fluxo::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: -5px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #d62828;
+}

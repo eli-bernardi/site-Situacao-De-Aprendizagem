@@ -1,20 +1,25 @@
-/* Reset e configurações básicas */
 * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Inter", sans-serif;
-    background-color: #f5f5f5;
-    color: #111;
-    line-height: 1.6;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Cabeçalho e navegação */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    background-color: #121212;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
 header {
-    background-color: #111;
+    background-color: #2c2c2c;
     padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -24,159 +29,258 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d62828;
+    margin: 0 24px;
 }
 
 .nav-list {
-    display: flex;
     list-style: none;
-    gap: 2rem;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .nav-list a {
-    color: white;
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    color: #cccccc;
+    font-weight: 500;
+    transition: color 0.3s;
+
 }
 
 .nav-list a:hover {
-    color: #e30613;
+    text-decoration: none;
+    color: #d62828;
 }
 
-/* Menu mobile (simplificado) */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 3px 0;
-    border-radius: 5px;
+h1,
+h2,
+h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
 }
 
-/* Conteúdo principal */
-main h1 {
-    text-align: center;
-    margin: 2rem 0;
-    color: #111;
+p {
+    margin-bottom: 1rem;
+    color: #cccccc;
 }
 
-main p {
-    max-width: 800px;
-    margin: 1rem auto;
-    color: #666;
-    text-align: center;
-    line-height: 1.8;
-}
-
-.divider {
+hr {
     border: none;
-    height: 2px;
-    background: #e30613;
-    width: 80px;
-    margin: 1rem auto 2rem;
+    border-top: 1px solid #333;
+    margin: 1rem 0;
 }
 
-/* Seção hero */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://picsum.photos/1600/500?tech') center/cover;
-    padding: 5rem 1rem;
-    color: white;
+.mapa {
+    background-color: #2c2c2c;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
     text-align: center;
+}
+
+.mapa h2 {
+    font-size: 2rem;
+    color: #d62828;
+}
+
+.mapa button {
+    background-color: #d62828;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.mapa button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.mapa button:hover {
+    background-color: #a71d1d;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+#servicos a {
+    color: #d62828;
+    text-decoration: none;
+}
+
+#servicos a:hover {
+    text-decoration: none;
+    transition: 0.3s;
+    color: #ffffff;
+}
+
+.map-container {
+    margin-top: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #d62828;
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: #cccccc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #d62828;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+section,
+.text-block {
+    background-color: #2c2c2c;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    line-height: 24px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    color: #d62828;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+p {
+    color: #cccccc;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+p strong {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+a {
+    color: #d62828;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    text-align: center;
+}
+
+a:hover {
+    color: #ff4c4c;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #d62828;
+    text-align: center;
+    color: #cccccc;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+
+}
+
+button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #a71d1d;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #2c2c2c;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .hero h2 {
     font-size: 2rem;
+    color: #d62828;
     margin-bottom: 1rem;
 }
 
 .hero p {
+    color: #cccccc;
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: white;
+    margin-bottom: 1.5rem;
 }
 
-.btn {
-    background: #e30613;
+.hero button {
+    background-color: #d62828;
+    color: #ffffff;
     border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
 
-.btn a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.btn:hover {
-    background: #b1040f;
-    text-decoration: none;
-}
-.section {
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-.section h3 {
-    color: #111;
-    margin-bottom: 1rem;
+.hero button a {
+    color: #ffffff;
     text-decoration: none;
 }
 
-.section p {
-    color: #666;
-    text-decoration: none;
-    color: #000;
+.hero button:hover {
+    background-color: #a71d1d;
 }
 
-.section a {
-    color: #0066cc;
-    text-decoration: none;
-}
 
-.section a:hover {
-    text-decoration: underline;
-}
-
-.bg-white {
-    background: white;
-}
-h3{
-    text-align: center;
-}
-.bg-light {
-    background: #f5f5f5;
-}
-
-/* Rodapé */
-footer {
-    background: #111;
-    color: #ccc;
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-footer a {
-    color: #e30613;
-    margin: 0 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: white;
+.map-container {
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #d62828;
 }

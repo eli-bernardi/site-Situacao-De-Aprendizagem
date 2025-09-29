@@ -109,24 +109,42 @@ hr {
     margin: 1.5rem 0;
 }
 
-#fluxograma table {
+/* --------------------------
+   ESTILO PARA TABELAS
+--------------------------- */
+
+table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.5rem 0;
-    border-radius: 8px;
-    overflow: hidden;
+    margin: 2rem 0;
+    font-size: 1rem;
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
 }
 
-#fluxograma thead {
+thead {
     background-color: #d62828;
     color: #ffffff;
 }
 
-#fluxograma th,
-#fluxograma td {
-    border: 1px solid #ccc;
+thead th {
     padding: 0.8rem;
-    text-align: center;
+    font-weight: bold;
+    border: 1px solid #333333;
+}
+
+tbody td {
+    padding: 0.8rem;
+    border: 1px solid #333333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+tbody tr:hover {
+    background-color: #292929;
 }
 
 footer {
@@ -147,6 +165,41 @@ footer a:hover {
     text-decoration: none;
     color: #ffffff;
 }
+
+/* --------------------------
+   BLOCO VARIÁVEL X CONSTANTE
+--------------------------- */
+
+.blocos {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    /* responsivo */
+}
+
+.bloco {
+    flex: 1;
+    min-width: 280px;
+    background-color: #111111;
+    border: 2px solid #d62828;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.bloco:hover {
+    transform: scale(1.05);
+}
+
+.bloco h2 {
+    color: #d62828;
+    margin-bottom: 1rem;
+}
+
 
 /* ------------------------------
    Símbolos do Fluxograma

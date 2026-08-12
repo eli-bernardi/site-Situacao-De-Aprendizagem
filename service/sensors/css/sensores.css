@@ -328,6 +328,42 @@ footer p {
     margin: 0 16px 16px;
 }
 
+/* ========== ESTILOS DE IMAGENS DIDÁTICAS ========== */
+.img-container {
+    margin: 32px 0;
+    text-align: center;
+}
+
+.img-diagrama {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.img-diagrama:hover {
+    transform: scale(1.02);
+}
+
+.img-componente {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 24px auto;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.img-caption {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 12px;
+    font-style: italic;
+}
+
 /* ========== CARDS DE NAVEGAÇÃO INTERNA ========== */
 .classificacao-grid {
     display: grid;

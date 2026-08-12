@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -22,94 +22,38 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
-        <nav id="menu-desktop" class="hidden md:flex items-center space-x-6 text-sm font-medium">
+
+        <nav id="menu"
+            class="hidden md:flex items-center space-x-6 text-sm font-medium">
             <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
 
             <div class="relative group">
                 <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
                 <ul
                     class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="./robotizacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robotização
-                        </a></li>
-                    <li><a href="./logica_programacao.html"
+                    <li><a href="/service/servicos/html/robotizacao.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robotização</a></li>
+                    <li><a href="/service/servicos/html/logica_programacao.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
                             Programação</a></li>
-                    <li><a href="./fundamentos_rede.html"
+                    <li><a href="/service/servicos/html/fundamentos_rede.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
                     </li>
-                    <li><a href="./logica_computacional.html"
+                    <li><a href="/service/servicos/html/logica_computacional.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
                             Computacional</a></li>
-                    <li><a href="./fundamentos_eletronica.html"
+                    <li><a href="/service/servicos/html/fundamentos_eletronica.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
                             Eletrônica</a></li>
-                    <li><a href="./tecnologia_informacao.html"
-                            class="block px-4 py-2 text-[#d62828] transition-colors">Tecnologia da Informação</a></li>
-                    <li><a href="./banco_dados.html"
+                    <li><a href="/service/servicos/html/tecnologia_informacao.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
+                            Informação</a></li>
+                    <li><a href="/service/servicos/html/banco_dados.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-                </ul>
-            </div>
-            <div class="relative group">
-                <a href="../html/robotizacao.html" class="text-[#d62828] transition-colors">Robotização</a>
-                <ul
-                    class="absolute left-0 top-full hidden group-hover:block bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/robots/html/robo_cartesiano.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Cartesiano</a>
-                    </li>
-                    <li><a href="/service/robots/html/robo_scara.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô SCARA</a></li>
-                    <li><a href="./robots/html/robo_articulado.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Articulado</a>
-                    </li>
-                    <li><a href="/service/robots/html/robo_cilindrico.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Cilíndrico</a>
-                    </li>
-                    <li><a href="/service/robots/html/robo_delta.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Delta</a></li>
-                    <li><a href="/service/robots/html/robo_polar.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Polar</a></li>
-                    <li><a href="/service/robots/html/robo_colaborativo.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Colaborativo</a>
-                    </li>
                 </ul>
             </div>
 
             <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
-        </nav>
-        <nav id="menu-mobile"
-            class="md:hidden flex flex-col absolute top-[70px] left-0 w-full bg-[#0a0a0a]/95 p-4 rounded-b-lg border-b-2 border-[#d62828] hidden">
-            <a href="/index.html" class="block py-2 hover:text-[#d62828] transition-colors">Início</a>
-
-            <div class="relative">
-                <button id="servicos-toggle"
-                    class="flex items-center justify-between w-full py-2 hover:text-[#d62828] transition-colors focus:outline-none">
-                    <span>Serviços</span>
-                    <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <ul id="servicos-submenu" class="hidden pl-4 space-y-1 border-l border-white/10 ml-2">
-
-                    <li><a href="/robotizacao.html"
-                            class="block py-2 hover:text-[#d62828] transition-colors">Robotização</a></li>
-                    <li><a href="/service/logica_programacao.html"
-                            class="block py-2 hover:text-[#d62828] transition-colors">Lógica de Programação</a></li>
-                    <li><a href="/service/fundamentos_rede.html"
-                            class="block py-2 hover:text-[#d62828] transition-colors">Sistemas de Rede</a></li>
-                    <li><a href="/service/logica_computacional.html"
-                            class="block py-2 hover:text-[#d62828] transition-colors">Lógica Computacional</a></li>
-                    <li><a href="/service/fundamentos_eletronica.html"
-                            class="block py-2 hover:text-[#d62828] transition-colors">Fundamentos de Eletrônica</a></li>
-                    <li><a href="/service/tecnologia_informacao.html"
-                            class="block py-2 hover:text-[#d62828] transition-colors">Tecnologia da Informação</a></li>
-                    <li><a href="/service/banco_dados.html"
-                            class="block py-2 hover:text-[#d62828] transition-colors">Banco de Dados</a></li>
-                </ul>
-            </div>
-
-            <a href="/contato.html" class="block py-2 hover:text-[#d62828] transition-colors">Contato</a>
         </nav>
     </header>
 

@@ -162,6 +162,6 @@ Este projeto está sob a licença **MIT**. Para mais detalhes, consulte o arquiv
 
 **Eliel Bernardi**  
 - **Instagram:** [instagram.com/elielbrnrd](https://www.instagram.com/elielbrnrd/)
-- **WhatsApp:** [wa.me/5548991013184](https://wa.me/5548991013184)
+- **WhatsApp:** [wa.me/5548991013184](https://wa.me/5548991004282)
 - **GitHub:** [github.com/eli-bernardi](https://github.com/eli-bernardi)
 - **E-mail:** elielbernardi0012@gmail.com

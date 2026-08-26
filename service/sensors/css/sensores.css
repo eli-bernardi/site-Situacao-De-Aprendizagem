@@ -537,6 +537,150 @@ footer p {
     transform: translateY(0);
 }
 
+/* ========== VÍDEOS & DESAFIOS PRÁTICOS ========== */
+.video-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.demo-video {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(214, 40, 40, 0.4);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(214, 40, 40, 0.15);
+    background: #000;
+    transition: all 0.3s ease;
+}
+
+.demo-video:hover {
+    border-color: #d62828;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.8), 0 0 35px rgba(214, 40, 40, 0.3);
+}
+
+.desafios-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 36px auto;
+}
+
+.desafio-card {
+    background: linear-gradient(145deg, rgba(24, 24, 24, 0.9), rgba(14, 14, 14, 0.98));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    position: relative;
+    overflow: hidden;
+}
+
+.desafio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #d62828, #ff6b6b, #d62828);
+}
+
+.desafio-card:hover {
+    border-color: rgba(214, 40, 40, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(214, 40, 40, 0.18);
+}
+
+.desafio-badge-num {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    border-radius: 9999px;
+    background: rgba(214, 40, 40, 0.15);
+    border: 1px solid rgba(214, 40, 40, 0.4);
+    color: #ff6b6b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.desafio-card h3 {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 8px 0 12px 0;
+    font-weight: 700;
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 14px 0 20px 0;
+}
+
+.tag-badge {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #bbb;
+    padding: 4px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tag-badge:hover {
+    border-color: #d62828;
+    color: #fff;
+    background: rgba(214, 40, 40, 0.12);
+}
+
+.code-block {
+    width: 100%;
+    max-width: 850px;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 24px auto;
+    text-align: left;
+}
+
+.code-header {
+    background: #151515;
+    padding: 12px 18px;
+    font-size: 13px;
+    color: #999;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.code-block pre {
+    padding: 18px;
+    overflow-x: auto;
+    font-family: 'Consolas', 'Fira Code', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
 /* ========== RESPONSIVIDADE ========== */
 @media (max-width: 768px) {
     header {
@@ -553,6 +697,10 @@ footer p {
 
     p {
         font-size: 18px;
+    }
+
+    .desafio-card {
+        padding: 24px 16px;
     }
 
     .classificacao-grid, .exemplos-grid, .setores-grid, .aplicacoes-grid, .specs-grid {

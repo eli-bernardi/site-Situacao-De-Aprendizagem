@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Del Company - Laboratório e Desafios Práticos com Sensores: demonstrações reais em bancada com Arduino e microcontroladores.">
+    <link rel="stylesheet" href="../css/sensores.css">
+    <link rel="shortcut icon" href="/img/dell.png" type="image/png">
+    <script src="../js/sensores.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Del Company - Desafios Práticos com Sensores</title>
+</head>
+
+<body class="bg-[#0a0a0a] text-white">
+    <!-- Header padronizado -->
+    <header
+        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
+        <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
+            Company</a>
+        <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
+            <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <nav id="menu" class="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
+            <div class="relative group">
+                <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
+                <ul
+                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
+                    <li><a href="/service/servicos/html/robotizacao.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
+                    <li><a href="/service/servicos/html/logica_programacao.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
+                            Programação</a></li>
+                    <li><a href="/service/servicos/html/fundamentos_rede.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
+                    </li>
+                    <li><a href="/service/servicos/html/logica_computacional.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
+                            Computacional</a></li>
+                    <li><a href="/service/servicos/html/fundamentos_eletronica.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
+                            Eletrônica</a></li>
+                    <li><a href="/service/servicos/html/tecnologia_informacao.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
+                            Informação</a></li>
+                    <li><a href="/service/servicos/html/banco_dados.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
+                </ul>
+            </div>
+
+            <div class="relative group">
+                <a href="/service/servicos/html/sensores.html"
+                    class="block py-2 text-[#d62828] transition-colors">Sensores</a>
+                <ul
+                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
+                    <li><a href="/service/sensors/html/sensor-introduca.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Introdução a Sensores</a></li>
+                    <li><a href="/service/sensors/html/sensor-tipos.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tipos de Sensores</a></li>
+                    <li><a href="/service/sensors/html/sensor-comunicacao.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Comunicação</a></li>
+                    <li><a href="/service/sensors/html/sensor-plataformas.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Plataformas IoT</a></li>
+                    <li><a href="/service/sensors/html/sensor-pratica.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Prática &amp; Desafios</a></li>
+                </ul>
+            </div>
+            <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <h2 class="logo-centro">Laboratório Prático com Sensores</h2>
+            <h3>Desafios de Bancada | Integração Hardware &amp; Software</h3>
+            <hr>
+            <p>
+                A teoria do sensoriamento ganha vida na bancada. Nesta seção prática, apresentamos
+                desafios reais desenvolvidos e testados com microcontroladores, demonstrando
+                a captura de variáveis físicas, o condicionamento de sinais e a resposta automatizada do sistema.
+            </p>
+            <div class="destaque">
+                <p>
+                    <strong>Metodologia Aplicada:</strong> Leitura contínua dos sensores &rarr; Processamento de limiares no microcontrolador &rarr; Acionamento de indicadores e atuadores em tempo real.
+                </p>
+            </div>
+        </section>
+
+        <!-- Grade de Desafios Práticos com Vídeos -->
+        <section class="reveal">
+            <h2>Demonstrações em Vídeo</h2>
+            <h3>Execução dos Desafios na Prática</h3>
+            <hr>
+
+            <div class="desafios-grid">
+                <!-- DESAFIO 1 -->
+                <article class="desafio-card">
+                    <span class="desafio-badge-num">Desafio Prático 01</span>
+                    <h3>Leitura e Monitoramento de Variáveis Físicas</h3>
+                    
+                    <div class="tags-list">
+                        <span class="tag-badge">Arduino UNO</span>
+                        <span class="tag-badge">Sensoriamento em Tempo Real</span>
+                        <span class="tag-badge">Monitor Serial</span>
+                        <span class="tag-badge">Sinalização Visual</span>
+                    </div>
+
+                    <p>
+                        Demonstração do circuito de bancada realizando a leitura contínua de sinais emitidos pelo sensor.
+                        O microcontrolador amostra os valores analógicos/digitais, realiza a conversão e sinaliza o estado operacional instantaneamente.
+                    </p>
+
+                    <div class="video-container">
+                        <video controls preload="metadata" class="demo-video">
+                            <source src="../img/desafio1.mp4" type="video/mp4">
+                            Seu navegador não suporta a reprodução de vídeo MP4.
+                        </video>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header"> Código de Base - Leitura de Sensor (Arduino / C++)</div>
+                        <pre><code>// Desafio 01 - Leitura e Monitoramento de Sensor
+const int SENSOR_PIN = A0;
+const int LED_INDICADOR = 13;
+int valorSensor = 0;
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(LED_INDICADOR, OUTPUT);
+    pinMode(SENSOR_PIN, INPUT);
+    Serial.println(">>> Desafio 01 Inicializado - Lendo Sensor...");
+}
+
+void loop() {
+    valorSensor = analogRead(SENSOR_PIN);
+    Serial.print("Leitura Atual do Sensor: ");
+    Serial.println(valorSensor);
+
+    if (valorSensor > 500) {
+        digitalWrite(LED_INDICADOR, HIGH);
+    } else {
+        digitalWrite(LED_INDICADOR, LOW);
+    }
+    delay(100);
+}</code></pre>
+                    </div>
+                </article>
+
+                <!-- DESAFIO 2 -->
+                <article class="desafio-card">
+                    <span class="desafio-badge-num">Desafio Prático 02</span>
+                    <h3>Controle de Limiares e Resposta Automatizada</h3>
+
+                    <div class="tags-list">
+                        <span class="tag-badge">Controle com Histerese</span>
+                        <span class="tag-badge">Atuadores</span>
+                        <span class="tag-badge">Automação de Bancada</span>
+                        <span class="tag-badge">Tratamento de Ruído</span>
+                    </div>
+
+                    <p>
+                        Neste experimento, o sistema avalia faixas de operação e limiares críticos. Ao detectar variações
+                        bruscas na grandeza física, o microcontrolador aciona automaticamente o elemento de resposta, prevenindo falsos positivos por meio de temporização.
+                    </p>
+
+                    <div class="video-container">
+                        <video controls preload="metadata" class="demo-video">
+                            <source src="../img/desafio2.mp4" type="video/mp4">
+                            Seu navegador não suporta a reprodução de vídeo MP4.
+                        </video>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header"> Código de Base - Lógica de Decisão e Histerese (Arduino / C++)</div>
+                        <pre><code>// Desafio 02 - Controle Automático com Faixa de Segurança
+const int PINO_SENSOR = A1;
+const int ATUADOR_PIN = 8;
+const int LIMIAR_SUPERIOR = 650;
+const int LIMIAR_INFERIOR = 450;
+bool estadoAtivo = false;
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(ATUADOR_PIN, OUTPUT);
+}
+
+void loop() {
+    int leitura = analogRead(PINO_SENSOR);
+
+    // Controle com histerese para evitar oscilações
+    if (leitura >= LIMIAR_SUPERIOR && !estadoAtivo) {
+        estadoAtivo = true;
+        digitalWrite(ATUADOR_PIN, HIGH);
+        Serial.println("[ALERTA] Limiar atingido - Atuador ACIONADO!");
+    } else if (leitura <= LIMIAR_INFERIOR && estadoAtivo) {
+        estadoAtivo = false;
+        digitalWrite(ATUADOR_PIN, LOW);
+        Serial.println("[INFO] Retorno ao normal - Atuador DESLIGADO.");
+    }
+    delay(150);
+}</code></pre>
+                    </div>
+                </article>
+
+                <!-- DESAFIO 3 -->
+                <article class="desafio-card">
+                    <span class="desafio-badge-num">Desafio Prático 03</span>
+                    <h3>Sistema Multissensorial Integrado e Alertas Críticos</h3>
+
+                    <div class="tags-list">
+                        <span class="tag-badge">Integração Multissensor</span>
+                        <span class="tag-badge">Sistemas Embarcados</span>
+                        <span class="tag-badge">Indústria 4.0 / IoT</span>
+                        <span class="tag-badge">Lógica Combinada</span>
+                    </div>
+
+                    <p>
+                        Apresentação do desafio mais avançado: integração de múltiplos pontos de sensoriamento sincronizados.
+                        O firmware processa simultaneamente diferentes tipos de estímulos do ambiente e gera alertas em cascata conforme a gravidade das leituras.
+                    </p>
+
+                    <div class="video-container">
+                        <video controls preload="metadata" class="demo-video">
+                            <source src="../img/desafio3.mp4" type="video/mp4">
+                            Seu navegador não suporta a reprodução de vídeo MP4.
+                        </video>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header"> Código de Base - Sistema Integrado Multissensor (Arduino / C++)</div>
+                        <pre><code>// Desafio 03 - Sistema Multissensorial com Alertas
+const int SENSOR_DIGITAL = 2;
+const int SENSOR_ANALOGICO = A2;
+const int BUZZER_PIN = 9;
+const int LED_STATUS = 12;
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(SENSOR_DIGITAL, INPUT_PULLUP);
+    pinMode(BUZZER_PIN, OUTPUT);
+    pinMode(LED_STATUS, OUTPUT);
+    Serial.println(">>> Sistema Multissensorial Operante <<<");
+}
+
+void loop() {
+    int presenca = digitalRead(SENSOR_DIGITAL);
+    int nivelSinal = analogRead(SENSOR_ANALOGICO);
+
+    // Avaliação de condições combinadas
+    if (presenca == LOW || nivelSinal > 750) {
+        digitalWrite(LED_STATUS, HIGH);
+        tone(BUZZER_PIN, 1000, 200);
+        Serial.print("[CRÍTICO] Evento detectado! Nível: ");
+        Serial.println(nivelSinal);
+    } else {
+        digitalWrite(LED_STATUS, LOW);
+        noTone(BUZZER_PIN);
+    }
+    delay(200);
+}</code></pre>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Boas práticas e aprendizados -->
+        <section class="reveal">
+            <h2>Boas Práticas no Laboratório</h2>
+            <hr>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <strong>Filtragem de Ruído</strong>
+                    <span>Utilize capacitores de desacoplamento e médias móveis no código para estabilizar sinais analógicos.</span>
+                </div>
+                <div class="spec-item">
+                    <strong>Resistores de Pull-up/down</strong>
+                    <span>Evite pinos flutuantes em sensores digitais garantindo níveis lógicos bem definidos (HIGH/LOW).</span>
+                </div>
+                <div class="spec-item">
+                    <strong>Compatibilidade de Tensão</strong>
+                    <span>Respeite as tensões de operação (3.3V vs 5V) usando divisores de tensão ou conversores de nível lógico.</span>
+                </div>
+                <div class="spec-item">
+                    <strong>Calibração em Bancada</strong>
+                    <span>Compare leituras brutas com grandezas reais conhecidas para ajustar as curvas de calibração do sensor.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegação entre os módulos -->
+        <section class="reveal">
+            <h2>Continue Explorando</h2>
+            <h3>Aprofunde a teoria por trás dos experimentos</h3>
+            <hr>
+            <div class="classificacao-grid">
+                <div class="class-card">
+                    <h4> Introdução aos Sensores</h4>
+                    <p>Fundamentos físicos, variáveis de processo e terminologias essenciais.</p>
+                    <a href="/service/sensors/html/sensor-introduca.html" class="btn-ver">Ver conteúdo &rarr;</a>
+                </div>
+                <div class="class-card">
+                    <h4> Tipos de Sensores</h4>
+                    <p>Catálogo detalhado: temperatura, presença, ultrassônico, gás e pressão.</p>
+                    <a href="/service/sensors/html/sensor-tipos.html" class="btn-ver">Ver conteúdo &rarr;</a>
+                </div>
+                <div class="class-card">
+                    <h4> Comunicação</h4>
+                    <p>Protocolos de integração: I²C, SPI, UART, 4-20 mA e IO-Link.</p>
+                    <a href="/service/sensors/html/sensor-comunicacao.html" class="btn-ver">Ver conteúdo &rarr;</a>
+                </div>
+                <div class="class-card">
+                    <h4> Plataformas IoT</h4>
+                    <p>Arduino, ESP32, Raspberry Pi, CLPs industriais e Indústria 4.0.</p>
+                    <a href="/service/sensors/html/sensor-plataformas.html" class="btn-ver">Ver conteúdo &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer padronizado -->
+    <footer class="reveal">
+        <div class="footer-content">
+            <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener"><span></span>
+                    Instagram</a>
+                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener"><span></span> Whatsapp</a>
+                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener"><span></span> GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
